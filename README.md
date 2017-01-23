@@ -12,19 +12,24 @@ The architecture was inspired by [U-Net: Convolutional Networks for Biomedical I
 
 ## Overview
 
-### Data
 
-[Provided data](https://www.kaggle.com/c/ultrasound-nerve-segmentation/data) is processed by ```data.py``` script.
+### Step 1 - Download Data
+
+[Download data from Kaggle](https://www.kaggle.com/c/ultrasound-nerve-segmentation/data)
+
+### Step 2 - Preprocess data to numpy arrays
+
+```
+python data.py
+```
+
 This script just loads the images and saves them into NumPy binary format files **.npy** for faster loading later.
-
-### Pre-processing
-
 The images are not pre-processed in any way, except resizing to 64 x 80. Since the images are pretty noisy,
 I expect that some thoughtful pre-processing could yield better performance of the model.
 
 Output images (masks) are scaled to \[0, 1\] interval.
 
-### Model
+### Model - Covnet Autoencoder
 
 The provided model is basically a convolutional auto-encoder, but with a twist - it has skip connections from encoder layers to decoder layers that are on the same "level".
 See picture below (note that image size and numbers of convolutional filters in this tutorial differs from the original U-Net architecture).
@@ -36,7 +41,7 @@ This deep neural network is implemented with Keras functional API, which makes i
 Output from the network is a 64 x 80 which represents mask that should be learned. Sigmoid activation function
 makes sure that mask pixels are in \[0, 1\] range.
 
-### Training
+### Training model
 
 The model is trained for 20 epochs, where each epoch took ~30 seconds on Titan X. Memory footprint of the model is ~800MB.
 
