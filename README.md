@@ -92,7 +92,11 @@ Also, the tree of ```raw``` dir must be like:
       ---- …
 ```
 
-* Now run ```python data.py```.
+* Now run 
+
+```
+python data.py
+```
 
 Running this script will create train and test images and save them to **.npy** files.
 
