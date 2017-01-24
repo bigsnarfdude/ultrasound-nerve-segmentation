@@ -111,7 +111,16 @@ should be generated. I suggest you examine these masks for getting further insig
 
 ### Generate submission
 
-* Run ```python submission.py``` to generate the submission file ```submission.csv``` for the generated masks.
+* Run 
+
+```
+python submission.py
+```
+
+to generate the submission file ```submission.csv``` for the generated masks.
+
+# This scores 0.54306 on LB
+
 
 Check out function ```submission()``` and ```run_length_enc()``` (thanks woshialex) for details.
 
