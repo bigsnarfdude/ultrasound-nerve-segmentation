@@ -1,5 +1,7 @@
 # Deep Learning Tutorial for Kaggle Ultrasound Nerve Segmentation competition, using Keras!
 
+# NOTE: This is a Theano based project
+
 This tutorial shows how to use [Keras library](http://keras.io/) to build deep neural network for ultrasound image nerve segmentation.
 More info on this Kaggle competition can be found on [https://www.kaggle.com/c/ultrasound-nerve-segmentation](https://www.kaggle.com/c/ultrasound-nerve-segmentation).
 
