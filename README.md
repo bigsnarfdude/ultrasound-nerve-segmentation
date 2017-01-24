@@ -102,7 +102,13 @@ Running this script will create train and test images and save them to **.npy** 
 
 ### Train the model and generate masks for test images
 
-* Run ```python train.py``` to train the model.
+* Run 
+
+```
+python train.py
+``` 
+
+to train the model.
 
 Check out ```train_predict()``` to modify the number of iterations (epochs), batch size, etc.
 
