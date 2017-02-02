@@ -129,7 +129,7 @@ python submission.py
 
 to generate the submission file ```submission.csv``` for the generated masks.
 
-# This scores 0.56624 on private LB
+# This scores 0.62483 on public LB
 
 
 Check out function ```submission()``` and ```run_length_enc()``` (thanks woshialex) for details.
