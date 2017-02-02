@@ -5,7 +5,7 @@
 This tutorial shows how to use [Keras library](http://keras.io/) to build deep neural network for ultrasound image nerve segmentation.
 More info on this Kaggle competition can be found on [https://www.kaggle.com/c/ultrasound-nerve-segmentation](https://www.kaggle.com/c/ultrasound-nerve-segmentation).
 
-This deep neural network achieves **~0.57 score on the leaderboard** based on test images,
+This deep neural network achieves **~0.62483 score on the leaderboard** based on test images,
 and can be a good starting point.
 
 The architecture was inspired by [U-Net: Convolutional Networks for Biomedical Image Segmentation](http://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/).
@@ -47,7 +47,7 @@ makes sure that mask pixels are in \[0, 1\] range.
 
 The model is trained for 20 epochs, where each epoch took ~30 seconds on Titan X. Memory footprint of the model is ~800MB.
 
-After 70 epochs with LR=0.00003, calculated Dice coefficient is ~0.80, which yielded ~0.57 score on leaderboard.
+After 100 epochs with LR=0.00003, calculated Dice coefficient is ~0.82, which yielded ~0.62483 score on leaderboard.
 
 Loss function for the training is basically just a **negative of Dice coefficient**
 (which is used as [evaluation metric on the competition](https://www.kaggle.com/c/ultrasound-nerve-segmentation/details/evaluation)),
