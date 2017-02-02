@@ -15,7 +15,7 @@ The architecture was inspired by [U-Net: Convolutional Networks for Biomedical I
 ## Overview
 
 
-### Step 1 - Download Data
+### Step 1 - Download Data, Unzip, into Raw directory
 
 [Download data from Kaggle](https://www.kaggle.com/c/ultrasound-nerve-segmentation/data)
 
