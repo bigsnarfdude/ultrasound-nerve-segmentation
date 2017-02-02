@@ -47,7 +47,7 @@ makes sure that mask pixels are in \[0, 1\] range.
 
 The model is trained for 20 epochs, where each epoch took ~30 seconds on Titan X. Memory footprint of the model is ~800MB.
 
-After 20 epochs, calculated Dice coefficient is ~0.68, which yielded ~0.57 score on leaderboard, so obviously this model overfits (cross-validation pull requests anyone? ;)).
+After 70 epochs with LR=0.00003, calculated Dice coefficient is ~0.80, which yielded ~0.57 score on leaderboard.
 
 Loss function for the training is basically just a **negative of Dice coefficient**
 (which is used as [evaluation metric on the competition](https://www.kaggle.com/c/ultrasound-nerve-segmentation/details/evaluation)),
@@ -65,10 +65,10 @@ The weights are updated by Adam optimizer, with a 1e-5 learning rate. During tra
 This tutorial depends on the following libraries:
 
 * cv2 (OpenCV)
-* Theano and/or Tensorflow
+* Thean
 * Keras >= 1.0
 
-Also, this code should be compatible with Python versions 2.7-3.5.
+This code works with Python versions 2.7.
 
 ### Prepare the data
 
@@ -129,22 +129,7 @@ python submission.py
 
 to generate the submission file ```submission.csv``` for the generated masks.
 
-# This scores 0.56366 on LB
+# This scores 0.56624 on private LB
 
 
 Check out function ```submission()``` and ```run_length_enc()``` (thanks woshialex) for details.
-
-
-## About Keras
-
-Keras is a minimalist, highly modular neural networks library, written in Python and capable of running on top of either TensorFlow or Theano. It was developed with a focus on enabling fast experimentation. Being able to go from idea to result with the least possible delay is key to doing good research.
-
-Use Keras if you need a deep learning library that:
-
-allows for easy and fast prototyping (through total modularity, minimalism, and extensibility).
-supports both convolutional networks and recurrent networks, as well as combinations of the two.
-supports arbitrary connectivity schemes (including multi-input and multi-output training).
-runs seamlessly on CPU and GPU.
-Read the documentation [Keras.io](http://keras.io/)
-
-Keras is compatible with: Python 2.7-3.5.
